@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- CSP meta tag to relax eval only if needed (but our code doesn't use eval) -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
     <title>Palais de Cèdre | Luxury Hotel Khénifra – Boutique Eco‑Luxury in Middle Atlas, Morocco</title>
     <meta name="description" content="Palais de Cèdre: the finest luxury hotel in Khénifra, Morocco. Nestled in the Middle Atlas cedar forest. Authentic hospitality, spa, and unforgettable nature experiences. Book direct.">
     <meta name="keywords" content="luxury hotel Khénifra, boutique hotel Morocco, cedar forest hotel Morocco, eco-luxury retreat, Palais de Cèdre, Middle Atlas hotel">
@@ -128,7 +130,6 @@
     <section id="rooms">
         <h2 data-i18n="rooms_title">Refined sanctuaries – luxury rooms in Khénifra</h2>
         <div class="rooms-grid">
-            <!-- Standard Room -->
             <div class="room-card fade-up" data-room-name="Standard Room">
                 <div class="room-img"><img src="singleroom.jpg" alt="Standard Room" loading="lazy" class="room-main-img"></div>
                 <div class="room-info">
@@ -138,7 +139,6 @@
                     <a href="#" class="btn-primary whatsapp-book" data-room="Standard Room" data-price="800"><i class="fab fa-whatsapp"></i> <span data-i18n="book_wa">Book via WhatsApp</span></a>
                 </div>
             </div>
-            <!-- Prestige Suite -->
             <div class="room-card fade-up" data-room-name="Prestige Suite">
                 <div class="room-img"><img src="suite1.jpg" alt="Prestige Suite" loading="lazy" class="room-main-img"></div>
                 <div class="room-info">
@@ -148,7 +148,6 @@
                     <a href="#" class="btn-primary whatsapp-book" data-room="Prestige Suite" data-price="1500"><i class="fab fa-whatsapp"></i> <span data-i18n="book_wa">Book via WhatsApp</span></a>
                 </div>
             </div>
-            <!-- Private Chalet -->
             <div class="room-card fade-up" data-room-name="Private Chalet">
                 <div class="room-img"><img src="chalet1.jpg" alt="Private Chalet" loading="lazy" class="room-main-img"></div>
                 <div class="room-info">
@@ -202,18 +201,34 @@
         <h2 data-i18n="booking_title">Plan your escape to Khénifra's luxury retreat</h2>
         <div class="booking-card fade-up">
             <form id="bookingForm">
-                <div class="form-group"><label data-i18n="form_name">Full name *</label><input type="text" id="guestName" placeholder="Leila Benali" required></div>
-                <div class="form-group"><label data-i18n="form_checkin">Check-in</label><input type="date" id="checkin" required></div>
-                <div class="form-group"><label data-i18n="form_checkout">Check-out</label><input type="date" id="checkout" required></div>
-                <div class="form-group"><label data-i18n="form_room">Room type</label>
-                    <select id="roomTypeSelect">
+                <div class="form-group">
+                    <label for="guestName" data-i18n="form_name">Full name *</label>
+                    <input type="text" id="guestName" name="guestName" placeholder="Leila Benali" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkin" data-i18n="form_checkin">Check-in</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout" data-i18n="form_checkout">Check-out</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomTypeSelect" data-i18n="form_room">Room type</label>
+                    <select id="roomTypeSelect" name="roomType">
                         <option value="800">Standard Room - 800 MAD/night</option>
                         <option value="1500">Prestige Suite - 1,500 MAD/night</option>
                         <option value="1800">Private Chalet - 1,800 MAD/night</option>
                     </select>
                 </div>
-                <div class="form-group"><label data-i18n="form_guests">Guests</label><input type="number" id="guests" min="1" max="6" value="2"></div>
-                <div class="form-group"><label data-i18n="form_requests">Special requests</label><textarea rows="2" id="specialRequests" placeholder="Any preferences?"></textarea></div>
+                <div class="form-group">
+                    <label for="guests" data-i18n="form_guests">Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="6" value="2">
+                </div>
+                <div class="form-group">
+                    <label for="specialRequests" data-i18n="form_requests">Special requests</label>
+                    <textarea rows="2" id="specialRequests" name="specialRequests" placeholder="Any preferences?"></textarea>
+                </div>
                 <div class="total-price" id="totalPriceDisplay">Total: — MAD</div>
                 <button type="button" id="whatsappSendBtn" class="btn-primary" style="width:100%;"><i class="fab fa-whatsapp"></i> <span data-i18n="send_wa">Send request via WhatsApp</span></button>
             </form>
@@ -237,30 +252,16 @@
 </div>
 
 <script>
-    // === GALLERY IMAGES – exactly as per your list (all .jpg) ===
+    // Gallery images – only those confirmed in your list
     const galleryImages = [
-        "exterieur.jpg",
-        "exterieur2.jpg",
-        "overview.jpg",
-        "pool1.jpg",
-        "pool2.jpg",
-        "pool3.jpg",
-        "restaurant%20and%20terasse.jpg",
-        "terasse.jpg",
-        "PHOTO-2023-09-26-18-55-38_2.jpg",
-        "PHOTO-2025-01-08-13-24-31.jpg",   // you may keep or remove; you asked to remove earlier but it's in your list
-        "PHOTO-2025-06-19-20-11-44.jpg",
-        "PHOTO-2025-06-19-20-11-44_1.jpg",
-        "PHOTO-2025-06-25-22-40-15_1.jpg",
-        "PHOTO-2025-06-25-22-40-15_3.jpg",
-        "PHOTO-2025-06-25-22-54-07.jpg",
-        "PHOTO-2025-06-25-22-54-07_1.jpg",
-        "PHOTO-2025-06-25-22-54-07_3.jpg",
-        "PHOTO-2025-06-25-22-54-09_1.jpg",
-        "PHOTO-2025-06-25-22-54-09_2.jpg",
-        "PHOTO-2025-06-25-22-54-09_3.jpg",
-        "PHOTO-2025-06-25-22-54-10_2.jpg",
-        "PHOTO-2025-07-15-19-18-54_3.jpg"
+        "exterieur.jpg", "exterieur2.jpg", "overview.jpg", "pool1.jpg", "pool2.jpg", "pool3.jpg",
+        "restaurant%20and%20terasse.jpg", "terasse.jpg",
+        "PHOTO-2023-09-26-18-55-38_2.jpg", "PHOTO-2025-01-08-13-24-31.jpg",
+        "PHOTO-2025-06-19-20-11-44.jpg", "PHOTO-2025-06-19-20-11-44_1.jpg",
+        "PHOTO-2025-06-25-22-40-15_1.jpg", "PHOTO-2025-06-25-22-40-15_3.jpg",
+        "PHOTO-2025-06-25-22-54-07.jpg", "PHOTO-2025-06-25-22-54-07_1.jpg", "PHOTO-2025-06-25-22-54-07_3.jpg",
+        "PHOTO-2025-06-25-22-54-09_1.jpg", "PHOTO-2025-06-25-22-54-09_2.jpg", "PHOTO-2025-06-25-22-54-09_3.jpg",
+        "PHOTO-2025-06-25-22-54-10_2.jpg", "PHOTO-2025-07-15-19-18-54_3.jpg"
     ];
 
     let currentIndex = 0, autoSlideInterval;
@@ -283,7 +284,7 @@
     function goToSlide(index) { currentIndex = (index + galleryImages.length) % galleryImages.length; updateCarousel(); resetAutoSlide(); }
     function nextSlide() { goToSlide(currentIndex + 1); }
     function prevSlide() { goToSlide(currentIndex - 1); }
-    function startAutoSlide() { if (autoSlideInterval) clearInterval(autoSlideInterval); autoSlideInterval = setInterval(() => nextSlide(), 5000); }
+    function startAutoSlide() { if (autoSlideInterval) clearInterval(autoSlideInterval); autoSlideInterval = setInterval(nextSlide, 5000); }
     function resetAutoSlide() { if (autoSlideInterval) clearInterval(autoSlideInterval); startAutoSlide(); }
     document.getElementById('carouselPrev').addEventListener('click', () => { prevSlide(); resetAutoSlide(); });
     document.getElementById('carouselNext').addEventListener('click', () => { nextSlide(); resetAutoSlide(); });
@@ -298,7 +299,7 @@
     lightboxClose.addEventListener('click', closeLightbox); lightboxPrev.addEventListener('click', showLightboxPrev); lightboxNext.addEventListener('click', showLightboxNext); lightboxModal.addEventListener('click', (e) => { if (e.target === lightboxModal) closeLightbox(); });
     document.addEventListener('keydown', (e) => { if (lightboxModal.style.display !== 'flex') return; if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowLeft') showLightboxPrev(); if (e.key === 'ArrowRight') showLightboxNext(); });
 
-    // Room multi-image lightbox – using exact filenames from your list
+    // Room multi-image lightbox
     const roomImages = {
         "Standard Room": ["singleroom.jpg", "room1.jpg", "room2.jpg", "room3.jpg", "room4.jpg"],
         "Prestige Suite": ["suite1.jpg", "suite2.jpg", "suite3.jpg", "suite4.jpg"],
@@ -315,7 +316,7 @@
     function applyLanguage(lang) { document.querySelectorAll('[data-i18n]').forEach(el => { const key = el.getAttribute('data-i18n'); if (langContent[lang] && langContent[lang][key]) el.innerText = langContent[lang][key]; }); document.querySelectorAll('.lang-switch span').forEach(btn => { btn.classList.remove('active'); if (btn.getAttribute('data-lang') === lang) btn.classList.add('active'); }); document.documentElement.lang = lang === 'fr' ? 'fr' : 'en'; document.body.style.direction = 'ltr'; }
     document.getElementById('LANG').querySelectorAll('span').forEach(btn => { btn.addEventListener('click', () => { applyLanguage(btn.getAttribute('data-lang')); }); }); applyLanguage('en');
 
-    // Booking calculator & WhatsApp
+    // Booking price calculator & WhatsApp
     const checkin = document.getElementById('checkin'), checkout = document.getElementById('checkout'), roomSelect = document.getElementById('roomTypeSelect'), totalSpan = document.getElementById('totalPriceDisplay');
     function calcNights() { if(checkin.value && checkout.value) { const diff = new Date(checkout.value) - new Date(checkin.value); if(diff>0) return Math.ceil(diff/(1000*3600*24)); } return 0; }
     function updateTotal() { let nights = calcNights(), price = parseInt(roomSelect.value); if(nights>0 && price) totalSpan.innerHTML = `Total: ${(price*nights).toLocaleString()} MAD (${nights} night${nights>1?'s':''} · ${price} MAD/night)`; else totalSpan.innerHTML = `Total: — MAD (select dates)`; }
@@ -323,17 +324,6 @@
     document.querySelectorAll('.whatsapp-book').forEach(btn => { btn.addEventListener('click', (e) => { e.preventDefault(); let roomName = btn.getAttribute('data-room'), price = btn.getAttribute('data-price'); window.open(`https://wa.me/212612345678?text=${encodeURIComponent(`Hello Palais de Cèdre, I'd like to book the ${roomName} (${price} MAD/night). Please confirm availability.`)}`,'_blank'); }); });
     document.getElementById('whatsappSendBtn').addEventListener('click',()=>{ let name = document.getElementById('guestName').value.trim(), ci = checkin.value, co = checkout.value, roomOpt = roomSelect.options[roomSelect.selectedIndex].text, guests = document.getElementById('guests').value, special = document.getElementById('specialRequests').value, nights = calcNights(), price = parseInt(roomSelect.value), total = nights * price; if(!name || !ci || !co || nights<=0) { alert("Please fill dates & name."); return; } window.open(`https://wa.me/212612345678?text=${encodeURIComponent(`*New reservation*%0A%0AName: ${name}%0ADates: ${ci} → ${co} (${nights} nights)%0ARoom: ${roomOpt}%0AGuests: ${guests}%0ATotal: ${total.toLocaleString()} MAD%0ARequests: ${special||"none"}%0AThank you.`)}`,'_blank'); });
     const fades = document.querySelectorAll('.fade-up'); const obs = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }); },{threshold:0.1}); fades.forEach(el=>obs.observe(el));
-
-    // Debug: list missing images in console
-    window.addEventListener('load', function() {
-        const allImages = document.querySelectorAll('img');
-        allImages.forEach(img => {
-            img.addEventListener('error', function() {
-                console.warn('❌ MISSING IMAGE:', this.src);
-            });
-        });
-        console.log('Website loaded. If any images are missing, check the console above.');
-    });
 </script>
 <script type="application/ld+json">
 {
