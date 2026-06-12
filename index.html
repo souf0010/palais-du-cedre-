@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- SEO Meta Tags -->
+    <title>Palais de Cèdre | Luxury Hotel Khénifra – Boutique Eco‑Luxury in Middle Atlas, Morocco</title>
+    <meta name="description" content="Palais de Cèdre: the finest luxury hotel in Khénifra, Morocco. Nestled in the Middle Atlas cedar forest. Authentic hospitality, spa, and unforgettable nature experiences. Book direct.">
+    <meta name="keywords" content="luxury hotel Khénifra, boutique hotel Morocco, cedar forest hotel Morocco, eco-luxury retreat, Palais de Cèdre, Middle Atlas hotel">
+    <meta name="author" content="Palais de Cèdre">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.palaisdecedre.com/">
+    <link rel="alternate" hreflang="en" href="https://www.palaisdecedre.com/">
+    <link rel="alternate" hreflang="fr" href="https://www.palaisdecedre.com/fr/">
+    
+    <!-- OpenGraph & Twitter Cards -->
+    <meta property="og:title" content="Palais de Cèdre – Intimate Mountain Sanctuary | Luxury Hotel Khénifra">
+    <meta property="og:description" content="Surrender to the silence of the cedars. Traditional hammam, forest‑view pool, quad excursions & refined tranquility in Morocco's Middle Atlas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.palaisdecedre.com/">
+    <meta property="og:image" content="https://www.palaisdecedre.com/images/overview.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Palais de Cèdre – Luxury Hotel in Khénifra, Morocco">
+    <meta name="twitter:description" content="Eco‑luxury retreat in the cedar forest. Book your mountain escape today.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --teal: #416662; --gold: #a99234; --soft-yellow: #ffde59; --dark-teal: #2F4F4A; --cream: #FEFAF2; --charcoal: #2C2B28; --sand: #F3EFE6; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--cream); color: var(--charcoal); line-height: 1.5; scroll-behavior: smooth; }
+        h1, h2, h3, .serif-heading { font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: -0.01em; }
+        h1 { font-size: 4rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--teal); border-left: 4px solid var(--gold); padding-left: 1rem; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 5rem 0; }
+        .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .btn-primary { background: var(--gold); color: white; border: none; padding: 0.9rem 2rem; font-weight: 600; border-radius: 40px; transition: all 0.3s ease; cursor: pointer; font-size: 1rem; display: inline-block; text-decoration: none; letter-spacing: 0.3px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .btn-primary:hover { background: #8B7429; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .btn-outline { background: transparent; border: 1.5px solid var(--gold); color: var(--gold); padding: 0.8rem 1.8rem; font-weight: 500; border-radius: 40px; transition: all 0.3s ease; cursor: pointer; display: inline-block; text-decoration: none; }
+        .btn-outline:hover { background: var(--gold); color: white; transform: translateY(-2px); }
+        .lang-switch { position: fixed; top: 20px; right: 20px; background: rgba(255,255,240,0.95); backdrop-filter: blur(6px); padding: 0.5rem 1rem; border-radius: 50px; display: flex; gap: 0.8rem; z-index: 1000; font-size: 0.85rem; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .lang-switch span { cursor: pointer; transition: 0.2s; color: var(--teal); }
+        .lang-switch span.active { color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+        
+        /* Hero Section with Background Image */
+        .hero { height: 100vh; min-height: 650px; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: white; background: url('images/overview.jpg') center center / cover no-repeat; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 30%, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%); }
+        .hero-content { position: relative; z-index: 2; max-width: 850px; padding: 0 1.5rem; }
+        .hero-content h1 { font-size: 4.5rem; font-weight: 600; margin-bottom: 1rem; }
+        .hero-content p { font-size: 1.3rem; margin-bottom: 2rem; font-weight: 300; }
+        
+        .room-img img { width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer; transition: opacity 0.2s; }
+        .room-img img:hover { opacity: 0.9; }
+        .room-img { height: 240px; background: #DCCFAF; overflow: hidden; }
+        .rooms-grid, .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .room-card { background: white; border-radius: 28px; overflow: hidden; box-shadow: 0 12px 24px rgba(0,0,0,0.05); transition: all 0.25s ease; display: flex; flex-direction: column; height: 100%; }
+        .room-card:hover { transform: translateY(-8px); box-shadow: 0 24px 36px rgba(0,0,0,0.1); }
+        .room-info { padding: 1.6rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .room-info .btn-primary { margin-top: auto; width: 100%; text-align: center; }
+        .price { font-size: 1.8rem; font-weight: 700; color: var(--gold); margin: 0.5rem 0; }
+        .service-item { background: white; padding: 2rem 1.5rem; border-radius: 28px; text-align: center; transition: 0.2s; box-shadow: 0 5px 12px rgba(0,0,0,0.03); }
+        .service-item i { font-size: 2.5rem; color: var(--teal); margin-bottom: 1rem; }
+        
+        .booking-card { background: white; border-radius: 32px; padding: 2.5rem; box-shadow: 0 20px 35px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 1.2rem; }
+        input, select, textarea { width: 100%; padding: 0.9rem 1rem; border: 1px solid #E0D6C8; background: #FEFAF5; border-radius: 20px; font-family: 'Inter', sans-serif; transition: 0.2s; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(169,146,52,0.2); }
+        .total-price { background: var(--sand); padding: 1rem; border-radius: 28px; text-align: center; font-weight: 600; margin: 1rem 0; color: var(--teal); }
+        footer { background: var(--teal); color: #E9EFE6; padding: 3rem 0; margin-top: 2rem; }
+        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+        .social-links a { color: var(--soft-yellow); margin-right: 1rem; font-size: 1.4rem; transition: color 0.2s; }
+        .social-links a:hover { color: white; }
+        @media (max-width: 768px) { .container { padding: 0 1.5rem; } h2 { font-size: 2rem; } .hero-content h1 { font-size: 2.8rem; } section { padding: 3rem 0; } .booking-card { padding: 1.5rem; } .lang-switch { top: 12px; right: 12px; padding: 0.3rem 0.8rem; } }
+        nav { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; background: rgba(255,251,240,0.95); backdrop-filter: blur(8px); padding: 1rem 2rem; position: sticky; top: 0; z-index: 99; border-bottom: 1px solid #EBE3D7; }
+        nav a { text-decoration: none; color: var(--teal); font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: var(--gold); }
+
+        /* Carousel (Slideshow) Styles */
+        .carousel-container { position: relative; max-width: 1200px; margin: 0 auto; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 35px rgba(0,0,0,0.1); }
+        .carousel-slides { display: flex; transition: transform 0.5s ease-in-out; }
+        .carousel-slide { min-width: 100%; aspect-ratio: 16 / 9; background: #DCCFAF; }
+        .carousel-slide img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 12px 18px; cursor: pointer; font-size: 24px; border-radius: 50%; transition: 0.2s; z-index: 10; }
+        .carousel-btn:hover { background: var(--gold); }
+        .carousel-prev { left: 20px; }
+        .carousel-next { right: 20px; }
+        .carousel-dots { position: absolute; bottom: 20px; left: 0; right: 0; display: flex; justify-content: center; gap: 12px; z-index: 10; }
+        .carousel-dot { width: 10px; height: 10px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: 0.2s; }
+        .carousel-dot.active { background: var(--gold); transform: scale(1.2); }
+        @media (max-width: 768px) { .carousel-btn { padding: 8px 12px; font-size: 18px; } .carousel-prev { left: 10px; } .carousel-next { right: 10px; } }
+        
+        /* Floating WhatsApp Button */
+        .float-wa { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s; z-index: 1000; text-decoration: none; }
+        .float-wa:hover { background: var(--gold); transform: scale(1.1); }
+        @media (max-width: 768px) { .float-wa { width: 50px; height: 50px; font-size: 1.6rem; bottom: 20px; right: 20px; } }
+    </style>
+</head>
+<body>
+<div class="lang-switch" id="langSwitcher">
+    <span data-lang="fr">🇫🇷 FR</span>
+    <span data-lang="en" class="active">🇬🇧 EN</span>
+</div>
+<nav>
+    <a href="#home" data-i18n="nav_home">Home</a>
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#rooms" data-i18n="nav_rooms">Rooms</a>
+    <a href="#services" data-i18n="nav_services">Services</a>
+    <a href="#experiences" data-i18n="nav_experiences">Experiences</a>
+    <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
+    <a href="#location" data-i18n="nav_location">Location</a>
+    <a href="#booking" data-i18n="nav_booking">Reserve</a>
+</nav>
+<a href="https://wa.me/212612345678" class="float-wa" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Palais de Cèdre</h1>
+        <p data-i18n="hero_sub">An intimate mountain sanctuary among ancient cedars</p>
+        <div class="hero-buttons">
+            <a href="#booking" class="btn-primary" data-i18n="hero_availability">Check Availability</a>
+            <a href="#rooms" class="btn-outline" style="background: rgba(0,0,0,0.2); border-color: white; color: white;" data-i18n="hero_rooms">View Rooms</a>
+        </div>
+        <div style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> <span data-i18n="hero_location">Khénifra, Morocco — cedar forest sanctuary</span></div>
+    </div>
+</section>
+<div class="container">
+    <section id="about">
+        <h2 data-i18n="about_title">Authentic serenity in Khénifra's cedar forest</h2>
+        <div class="fade-up" style="max-width: 800px;">
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="about_p1">Hidden among thousand-year-old cedars in the Middle Atlas, Palais de Cèdre is an intimate haven where Berber soul meets contemporary refinement. This boutique luxury hotel in Khénifra, Morocco, offers an escape into nature without sacrificing elegance.</p>
+            <p style="margin-bottom: 1rem;" data-i18n="about_p2">Sustainably designed with local stone and artisanal touches, our hotel offers a sanctuary for the senses: authentic Moroccan cuisine, a traditional hammam, and starry nights by the fireplace. Reconnect with the cedar forest – one of Morocco's most treasured landscapes.</p>
+            <p data-i18n="about_p3">Every detail whispers tranquility — from the murmur of the nearby river to the golden light filtering through cedar branches. Here, time slows down, and luxury is measured in moments of genuine peace.</p>
+        </div>
+    </section>
+    <section id="rooms">
+        <h2 data-i18n="rooms_title">Refined sanctuaries – luxury rooms in Khénifra</h2>
+        <div class="rooms-grid">
+            <div class="room-card fade-up" data-room-name="Standard Room">
+                <div class="room-img"><img src="images/singleroom.jpg" alt="Standard Room at Palais de Cèdre – cozy luxury in Khénifra" loading="lazy" class="room-main-img"></div>
+                <div class="room-info">
+                    <h3 data-i18n="room_std_name">Standard Room</h3>
+                    <div class="price">800 MAD <span style="font-size:0.9rem;" data-i18n="per_night">/ night</span></div>
+                    <p data-i18n="room_std_desc">Cozy elegance with cedar wood accents and garden views. Ideal for couples seeking quiet intimacy in the Middle Atlas.</p>
+                    <a href="#" class="btn-primary whatsapp-book" data-room="Standard Room" data-price="800"><i class="fab fa-whatsapp"></i> <span data-i18n="book_wa">Book via WhatsApp</span></a>
+                </div>
+            </div>
+            <div class="room-card fade-up" data-room-name="Prestige Suite">
+                <div class="room-img"><img src="images/suite1.jpg" alt="Prestige Suite – spacious luxury suite with forest views in Khénifra" loading="lazy" class="room-main-img"></div>
+                <div class="room-info">
+                    <h3 data-i18n="room_suite_name">Prestige Suite</h3>
+                    <div class="price">1,500 MAD <span style="font-size:0.9rem;" data-i18n="per_night">/ night</span></div>
+                    <p data-i18n="room_suite_desc">Spacious living area with panoramic forest views and a luxurious rain shower. The ultimate romantic escape.</p>
+                    <a href="#" class="btn-primary whatsapp-book" data-room="Prestige Suite" data-price="1500"><i class="fab fa-whatsapp"></i> <span data-i18n="book_wa">Book via WhatsApp</span></a>
+                </div>
+            </div>
+            <div class="room-card fade-up" data-room-name="Private Chalet">
+                <div class="room-img"><img src="images/chalet1.jpg" alt="Private Chalet – standalone luxury chalet in the cedar forest of Khénifra" loading="lazy" class="room-main-img"></div>
+                <div class="room-info">
+                    <h3 data-i18n="room_chalet_name">Private Chalet</h3>
+                    <div class="price">1,800 MAD <span style="font-size:0.9rem;" data-i18n="per_night">/ night</span></div>
+                    <p data-i18n="room_chalet_desc">Standalone chalet with a fireplace and panoramic mountain views. Absolute privacy in Morocco's Middle Atlas.</p>
+                    <a href="#" class="btn-primary whatsapp-book" data-room="Private Chalet" data-price="1800"><i class="fab fa-whatsapp"></i> <span data-i18n="book_wa">Book via WhatsApp</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <h2 data-i18n="services_title">Divine rituals & amenities – cedar forest luxury</h2>
+        <div class="services-grid">
+            <div class="service-item fade-up"><i class="fas fa-spa"></i><h3 data-i18n="serv_spa">Spa & Hammam</h3><p data-i18n="serv_spa_desc">Traditional steam bath and relaxing body rituals inspired by Moroccan traditions.</p></div>
+            <div class="service-item fade-up"><i class="fas fa-utensils"></i><h3 data-i18n="serv_resto">Restaurant</h3><p data-i18n="serv_resto_desc">Authentic Moroccan & international cuisine, featuring local ingredients from Khénifra.</p></div>
+            <div class="service-item fade-up"><i class="fas fa-swimming-pool"></i><h3 data-i18n="serv_pool">Pool with Forest & Mountain View</h3><p data-i18n="serv_pool_desc">Panoramic pool overlooking the cedar forest and Atlas peaks.</p></div>
+            <div class="service-item fade-up"><i class="fas fa-concierge-bell"></i><h3 data-i18n="serv_room">Room Service</h3><p data-i18n="serv_room_desc">24/7 in-dining with local ingredients.</p></div>
+            <div class="service-item fade-up"><i class="fas fa-motorcycle"></i><h3 data-i18n="serv_quad">Quad Motorcycle</h3><p data-i18n="serv_quad_desc">Guided quad tours through cedar trails and mountains around Khénifra.</p></div>
+        </div>
+    </section>
+    <section id="experiences">
+        <h2 data-i18n="exp_title">Unforgettable journeys in the Middle Atlas</h2>
+        <div class="rooms-grid">
+            <div class="service-item fade-up" style="text-align:left;"><i class="fas fa-water"></i><h3 data-i18n="exp_lake">Lake Aguelmam Azegza</h3><p data-i18n="exp_lake_desc">Birdwatching and picnic by the pristine mountain lake, a hidden gem near Khénifra.</p></div>
+            <div class="service-item fade-up" style="text-align:left;"><i class="fas fa-tree"></i><h3 data-i18n="exp_cedar">Cedar forest hiking</h3><p data-i18n="exp_cedar_desc">Guided walks among ancient Atlas cedars – the largest cedar forest in Morocco.</p></div>
+            <div class="service-item fade-up" style="text-align:left;"><i class="fas fa-motorcycle"></i><h3 data-i18n="exp_quad">Quad Motorcycle adventure</h3><p data-i18n="exp_quad_desc">Exciting quad ride through scenic forest trails & Berber villages.</p></div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section (Carousel) -->
+    <section id="gallery">
+        <h2 data-i18n="gallery_title">Visual poetry – our cedar forest sanctuary</h2>
+        <div class="carousel-container fade-up">
+            <div class="carousel-slides" id="carouselSlides"></div>
+            <button class="carousel-btn carousel-prev" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn carousel-next" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+    <section id="location">
+        <h2 data-i18n="location_title">In the heart of Atlas wilderness – Khénifra, Morocco</h2>
+        <div style="border-radius: 28px; overflow: hidden; margin-bottom: 1.5rem;">
+            <iframe src="https://maps.google.com/maps?q=32.9340,-5.6640&z=14&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Palais+de+Cèdre+Khénifra" target="_blank" class="btn-outline"><i class="fas fa-map-pin"></i> <span data-i18n="open_maps">Open in Google Maps</span></a>
+        </div>
+        <p style="text-align: center; margin-top: 1rem;">Route de Khenifra, Province Khénifra, 54000 Morocco</p>
+    </section>
+    <section id="booking">
+        <h2 data-i18n="booking_title">Plan your escape to Khénifra's luxury retreat</h2>
+        <div class="booking-card fade-up">
+            <form id="bookingForm">
+                <div class="form-group"><label data-i18n="form_name">Full name *</label><input type="text" id="guestName" placeholder="Leila Benali" required></div>
+                <div class="form-group"><label data-i18n="form_checkin">Check-in</label><input type="date" id="checkin" required></div>
+                <div class="form-group"><label data-i18n="form_checkout">Check-out</label><input type="date" id="checkout" required></div>
+                <div class="form-group"><label data-i18n="form_room">Room type</label>
+                    <select id="roomTypeSelect">
+                        <option value="800">Standard Room - 800 MAD/night</option>
+                        <option value="1500">Prestige Suite - 1,500 MAD/night</option>
+                        <option value="1800">Private Chalet - 1,800 MAD/night</option>
+                    </select>
+                </div>
+                <div class="form-group"><label data-i18n="form_guests">Guests</label><input type="number" id="guests" min="1" max="6" value="2"></div>
+                <div class="form-group"><label data-i18n="form_requests">Special requests</label><textarea rows="2" id="specialRequests" placeholder="Any preferences?"></textarea></div>
+                <div class="total-price" id="totalPriceDisplay">Total: — MAD</div>
+                <button type="button" id="whatsappSendBtn" class="btn-primary" style="width:100%;"><i class="fab fa-whatsapp"></i> <span data-i18n="send_wa">Send request via WhatsApp</span></button>
+            </form>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="container footer-grid">
+        <div><h3 style="color: #FFDE59;">Palais de Cèdre</h3><p data-i18n="footer_tag">Intimate mountain sanctuary · Middle Atlas</p><p><i class="fas fa-phone-alt"></i> +212 612 345 678</p><p><i class="fas fa-envelope"></i> reserve@palaisdecedre.ma</p></div>
+        <div><p data-i18n="follow">Follow the journey</p><div class="social-links"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></div></div>
+        <div><p><a href="#" style="color:#FFDE59;">Privacy Policy</a> | <a href="#" style="color:#FFDE59;">Terms</a></p><p>© 2025 Palais de Cèdre — authentic Moroccan hospitality</p></div>
+    </div>
+</footer>
+
+<!-- Lightbox Modal -->
+<div id="lightboxModal" class="lightbox-modal" style="display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:2000; justify-content:center; align-items:center; flex-direction:column;">
+    <span class="lightbox-close" style="position:absolute; top:20px; right:40px; color:white; font-size:40px; cursor:pointer;">&times;</span>
+    <span class="lightbox-prev" style="position:absolute; left:20px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; padding:16px; cursor:pointer; font-size:30px; border-radius:50%;"><i class="fas fa-chevron-left"></i></span>
+    <span class="lightbox-next" style="position:absolute; right:20px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; padding:16px; cursor:pointer; font-size:30px; border-radius:50%;"><i class="fas fa-chevron-right"></i></span>
+    <img class="lightbox-image" style="max-width:90%; max-height:80%; object-fit:contain; border-radius:12px;">
+</div>
+
+<script>
+    // Carousel images list (all your gallery images)
+    const galleryImages = [
+        "images/exterieur.jpg", "images/exterieur2.jpg", "images/overview.jpg", "images/pool1.jpg", "images/pool2.jpg", "images/pool3.jpg",
+        "images/restaurant%20and%20terasse.jpg", "images/terasse.jpg", "images/PHOTO-2025-06-19-20-11-44.jpg", "images/PHOTO-2025-06-19-20-11-44_1.jpg",
+        "images/PHOTO-2025-06-25-22-40-15_1.jpg", "images/PHOTO-2025-06-25-22-40-15_3.jpg", "images/PHOTO-2025-06-25-22-54-07.jpg",
+        "images/PHOTO-2025-06-25-22-54-07_1.jpg", "images/PHOTO-2025-06-25-22-54-07_3.jpg", "images/PHOTO-2025-06-25-22-54-09_1.jpg",
+        "images/PHOTO-2025-06-25-22-54-09_2.jpg", "images/PHOTO-2025-06-25-22-54-09_3.jpg", "images/PHOTO-2025-06-25-22-54-10_2.jpg",
+        "images/PHOTO-2025-07-15-19-18-54_3.jpg", "images/PHOTO-2023-09-26-18-55-38_2.jpg"
+    ];
+
+    let currentIndex = 0, autoSlideInterval;
+    const slidesContainer = document.getElementById('carouselSlides');
+    const dotsContainer = document.getElementById('carouselDots');
+
+    function buildCarousel() {
+        slidesContainer.innerHTML = ''; dotsContainer.innerHTML = '';
+        galleryImages.forEach((imgSrc, idx) => {
+            const slideDiv = document.createElement('div'); slideDiv.className = 'carousel-slide';
+            const img = document.createElement('img'); img.src = imgSrc; img.alt = `Gallery image ${idx+1} - Palais de Cèdre Khénifra`; img.loading = 'lazy';
+            img.addEventListener('click', (e) => { e.stopPropagation(); openLightbox([imgSrc], 0); });
+            slideDiv.appendChild(img); slidesContainer.appendChild(slideDiv);
+            const dot = document.createElement('div'); dot.className = 'carousel-dot'; dot.addEventListener('click', () => goToSlide(idx)); dotsContainer.appendChild(dot);
+        });
+        updateCarousel(); startAutoSlide();
+    }
+
+    function updateCarousel() { slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`; document.querySelectorAll('.carousel-dot').forEach((dot, idx) => idx === currentIndex ? dot.classList.add('active') : dot.classList.remove('active')); }
+    function goToSlide(index) { currentIndex = (index + galleryImages.length) % galleryImages.length; updateCarousel(); resetAutoSlide(); }
+    function nextSlide() { goToSlide(currentIndex + 1); }
+    function prevSlide() { goToSlide(currentIndex - 1); }
+    function startAutoSlide() { if (autoSlideInterval) clearInterval(autoSlideInterval); autoSlideInterval = setInterval(() => nextSlide(), 5000); }
+    function resetAutoSlide() { if (autoSlideInterval) clearInterval(autoSlideInterval); startAutoSlide(); }
+    document.getElementById('carouselPrev').addEventListener('click', () => { prevSlide(); resetAutoSlide(); });
+    document.getElementById('carouselNext').addEventListener('click', () => { nextSlide(); resetAutoSlide(); });
+
+    // Lightbox logic
+    let currentLightboxList = [], currentLightboxIndex = 0;
+    const lightboxModal = document.getElementById('lightboxModal'), lightboxImg = lightboxModal.querySelector('.lightbox-image'), lightboxClose = lightboxModal.querySelector('.lightbox-close'), lightboxPrev = lightboxModal.querySelector('.lightbox-prev'), lightboxNext = lightboxModal.querySelector('.lightbox-next');
+    function openLightbox(images, startIndex) { if (!images.length) return; currentLightboxList = images; currentLightboxIndex = startIndex; lightboxImg.src = currentLightboxList[currentLightboxIndex]; lightboxModal.style.display = 'flex'; document.body.style.overflow = 'hidden'; if (autoSlideInterval) clearInterval(autoSlideInterval); }
+    function closeLightbox() { lightboxModal.style.display = 'none'; document.body.style.overflow = ''; startAutoSlide(); }
+    function showLightboxPrev() { if (currentLightboxList.length <= 1) return; currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxList.length) % currentLightboxList.length; lightboxImg.src = currentLightboxList[currentLightboxIndex]; }
+    function showLightboxNext() { if (currentLightboxList.length <= 1) return; currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxList.length; lightboxImg.src = currentLightboxList[currentLightboxIndex]; }
+    lightboxClose.addEventListener('click', closeLightbox); lightboxPrev.addEventListener('click', showLightboxPrev); lightboxNext.addEventListener('click', showLightboxNext); lightboxModal.addEventListener('click', (e) => { if (e.target === lightboxModal) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (lightboxModal.style.display !== 'flex') return; if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowLeft') showLightboxPrev(); if (e.key === 'ArrowRight') showLightboxNext(); });
+
+    // Room multi-image lightbox
+    const roomImages = { "Standard Room": ["images/singleroom.jpg","images/room1.jpg","images/room2.jpg","images/room3.jpg","images/room4.jpg"], "Prestige Suite": ["images/suite1.jpg","images/suite2.jpg","images/suite3.jpg","images/suite4.jpg","images/PHOTO-2025-06-25-22-54-07.jpg","images/PHOTO-2025-06-25-22-54-07_1.jpg","images/PHOTO-2025-06-25-22-54-07_3.jpg"], "Private Chalet": ["images/chalet1.jpg","images/chalet2.jpg","images/chalet3.jpg","images/chalet4.jpg","images/chalet%201.jpg","images/chalet%202.jpg"] };
+    document.querySelectorAll('.room-card').forEach(card => { const roomName = card.getAttribute('data-room-name'); const imgElement = card.querySelector('.room-main-img'); if (roomName && roomImages[roomName]?.length) { imgElement.style.cursor = 'pointer'; imgElement.addEventListener('click', (e) => { e.stopPropagation(); const images = roomImages[roomName]; let startIdx = images.indexOf(imgElement.src); if (startIdx === -1) startIdx = 0; openLightbox(images, startIdx); if (autoSlideInterval) clearInterval(autoSlideInterval); }); } else if (imgElement) { imgElement.addEventListener('click', () => openLightbox([imgElement.src], 0)); } });
+
+    window.addEventListener('load', () => { buildCarousel(); window.addEventListener('resize', updateCarousel); });
+
+    // Language content (EN/FR) without any reviews keys
+    const langContent = {
+        en: { nav_home:"Home", nav_about:"About", nav_rooms:"Rooms", nav_services:"Services", nav_experiences:"Experiences", nav_gallery:"Gallery", nav_location:"Location", nav_booking:"Reserve", hero_sub:"An intimate mountain sanctuary among ancient cedars", hero_availability:"Check Availability", hero_rooms:"View Rooms", hero_location:"Khénifra, Morocco — cedar forest sanctuary", about_title:"Authentic serenity in Khénifra's cedar forest", about_p1:"Hidden among thousand-year-old cedars in the Middle Atlas, Palais de Cèdre is an intimate haven where Berber soul meets contemporary refinement. This boutique luxury hotel in Khénifra, Morocco, offers an escape into nature without sacrificing elegance.", about_p2:"Sustainably designed with local stone and artisanal touches, our hotel offers a sanctuary for the senses: authentic Moroccan cuisine, a traditional hammam, and starry nights by the fireplace. Reconnect with the cedar forest – one of Morocco's most treasured landscapes.", about_p3:"Every detail whispers tranquility — from the murmur of the nearby river to the golden light filtering through cedar branches. Here, time slows down, and luxury is measured in moments of genuine peace.", rooms_title:"Refined sanctuaries – luxury rooms in Khénifra", room_std_name:"Standard Room", room_suite_name:"Prestige Suite", room_chalet_name:"Private Chalet", per_night:"/ night", room_std_desc:"Cozy elegance with cedar wood accents and garden views. Ideal for couples seeking quiet intimacy in the Middle Atlas.", room_suite_desc:"Spacious living area with panoramic forest views and a luxurious rain shower. The ultimate romantic escape.", room_chalet_desc:"Standalone chalet with a fireplace and panoramic mountain views. Absolute privacy in Morocco's Middle Atlas.", book_wa:"Book via WhatsApp", services_title:"Divine rituals & amenities – cedar forest luxury", serv_spa:"Spa & Hammam", serv_spa_desc:"Traditional steam bath and relaxing body rituals inspired by Moroccan traditions.", serv_resto:"Restaurant", serv_resto_desc:"Authentic Moroccan & international cuisine, featuring local ingredients from Khénifra.", serv_pool:"Pool with Forest & Mountain View", serv_pool_desc:"Panoramic pool overlooking the cedar forest and Atlas peaks.", serv_room:"Room Service", serv_room_desc:"24/7 in-dining with local ingredients.", serv_quad:"Quad Motorcycle", serv_quad_desc:"Guided quad tours through cedar trails and mountains around Khénifra.", exp_title:"Unforgettable journeys in the Middle Atlas", exp_lake:"Lake Aguelmam Azegza", exp_lake_desc:"Birdwatching and picnic by the pristine mountain lake, a hidden gem near Khénifra.", exp_cedar:"Cedar forest hiking", exp_cedar_desc:"Guided walks among ancient Atlas cedars – the largest cedar forest in Morocco.", exp_quad:"Quad Motorcycle adventure", exp_quad_desc:"Exciting quad ride through scenic forest trails & Berber villages.", gallery_title:"Visual poetry – our cedar forest sanctuary", location_title:"In the heart of Atlas wilderness – Khénifra, Morocco", open_maps:"Open in Google Maps", booking_title:"Plan your escape to Khénifra's luxury retreat", form_name:"Full name *", form_checkin:"Check-in", form_checkout:"Check-out", form_room:"Room type", form_guests:"Guests", form_requests:"Special requests", send_wa:"Send request via WhatsApp", footer_tag:"Intimate mountain sanctuary · Middle Atlas", follow:"Follow the journey" },
+        fr: { nav_home:"Accueil", nav_about:"L'histoire", nav_rooms:"Chambres", nav_services:"Services", nav_experiences:"Expériences", nav_gallery:"Galerie", nav_location:"Localisation", nav_booking:"Réserver", hero_sub:"Un sanctuaire intime de montagne au cœur des cèdres ancestraux", hero_availability:"Vérifier disponibilité", hero_rooms:"Voir les chambres", hero_location:"Khénifra, Maroc — sanctuaire de la forêt de cèdres", about_title:"Sérénité authentique dans la forêt de cèdres de Khénifra", about_p1:"Niché parmi les cèdres millénaires du Moyen Atlas, Palais de Cèdre est un havre où l'âme berbère rencontre le raffinement contemporain. Cet hôtel de luxe à Khénifra, Maroc, offre une évasion dans la nature sans sacrifier l'élégance.", about_p2:"Conçu en pierre locale et finitions artisanales, notre hôtel offre un sanctuaire pour les sens : une cuisine marocaine authentique, un hammam traditionnel et des nuits étoilées au coin du feu.", about_p3:"Chaque détail murmure la tranquillité – du bruissement de la rivière voisine à la lumière dorée filtrant à travers les cèdres. Ici, le temps ralentit, et le luxe se mesure en instants de paix véritable.", rooms_title:"Sanctuaires raffinés – chambres de luxe à Khénifra", room_std_name:"Chambre Standard", room_suite_name:"Suite Prestige", room_chalet_name:"Chalet Privé", per_night:"/ nuit", room_std_desc:"Élégance cosy avec accents de bois de cèdre et vue jardin. Idéal pour les couples en quête d'intimité dans le Moyen Atlas.", room_suite_desc:"Grand salon avec vue panoramique sur la forêt et douche à effet pluie. L'escapade romantique ultime.", room_chalet_desc:"Chalet indépendant avec cheminée et vue panoramique sur les montagnes. Intimité absolue dans le Moyen Atlas marocain.", book_wa:"Réserver via WhatsApp", services_title:"Rituels divins & équipements – luxe dans la forêt de cèdres", serv_spa:"Spa & Hammam", serv_spa_desc:"Bain de vapeur traditionnel et rituels de détente inspirés des traditions marocaines.", serv_resto:"Restaurant", serv_resto_desc:"Cuisine marocaine et internationale authentique avec des produits locaux de Khénifra.", serv_pool:"Piscine avec vue sur forêt et montagne", serv_pool_desc:"Piscine panoramique surplombant la forêt de cèdres et les sommets de l'Atlas.", serv_room:"Service d'étage", serv_room_desc:"Service en chambre 24/7 avec des produits locaux.", serv_quad:"Moto Quad", serv_quad_desc:"Circuits guidés en quad à travers les sentiers de cèdres et les montagnes autour de Khénifra.", exp_title:"Voyages inoubliables dans le Moyen Atlas", exp_lake:"Lac Aguelmam Azegza", exp_lake_desc:"Observation des oiseaux et pique-nique au bord du lac, un joyau caché près de Khénifra.", exp_cedar:"Randonnée en forêt de cèdres", exp_cedar_desc:"Promenades guidées parmi les cèdres ancestraux – la plus grande forêt de cèdres du Maroc.", exp_quad:"Aventure en Quad", exp_quad_desc:"Excursion en quad sur les sentiers forestiers et villages berbères.", gallery_title:"Poésie visuelle – notre sanctuaire de forêt de cèdres", location_title:"Au cœur de la nature de l'Atlas – Khénifra, Maroc", open_maps:"Ouvrir dans Google Maps", booking_title:"Préparez votre évasion vers le refuge de luxe de Khénifra", form_name:"Nom complet *", form_checkin:"Arrivée", form_checkout:"Départ", form_room:"Type de chambre", form_guests:"Voyageurs", form_requests:"Demandes spéciales", send_wa:"Envoyer via WhatsApp", footer_tag:"Sanctuaire intime de montagne · Moyen Atlas", follow:"Suivez-nous" }
+    };
+    function applyLanguage(lang) { document.querySelectorAll('[data-i18n]').forEach(el => { const key = el.getAttribute('data-i18n'); if (langContent[lang] && langContent[lang][key]) el.innerText = langContent[lang][key]; }); document.querySelectorAll('.lang-switch span').forEach(btn => { btn.classList.remove('active'); if (btn.getAttribute('data-lang') === lang) btn.classList.add('active'); }); document.documentElement.lang = lang === 'fr' ? 'fr' : 'en'; document.body.style.direction = 'ltr'; }
+    document.getElementById('langSwitcher').querySelectorAll('span').forEach(btn => { btn.addEventListener('click', () => { applyLanguage(btn.getAttribute('data-lang')); }); }); applyLanguage('en');
+
+    // Booking price calculator & WhatsApp
+    const checkin = document.getElementById('checkin'), checkout = document.getElementById('checkout'), roomSelect = document.getElementById('roomTypeSelect'), totalSpan = document.getElementById('totalPriceDisplay');
+    function calcNights() { if(checkin.value && checkout.value) { const diff = new Date(checkout.value) - new Date(checkin.value); if(diff>0) return Math.ceil(diff/(1000*3600*24)); } return 0; }
+    function updateTotal() { let nights = calcNights(), price = parseInt(roomSelect.value); if(nights>0 && price) totalSpan.innerHTML = `Total: ${(price*nights).toLocaleString()} MAD (${nights} night${nights>1?'s':''} · ${price} MAD/night)`; else totalSpan.innerHTML = `Total: — MAD (select dates)`; }
+    checkin.addEventListener('change',updateTotal); checkout.addEventListener('change',updateTotal); roomSelect.addEventListener('change',updateTotal); updateTotal();
+    document.querySelectorAll('.whatsapp-book').forEach(btn => { btn.addEventListener('click', (e) => { e.preventDefault(); let roomName = btn.getAttribute('data-room'), price = btn.getAttribute('data-price'); window.open(`https://wa.me/212612345678?text=${encodeURIComponent(`Hello Palais de Cèdre, I'd like to book the ${roomName} (${price} MAD/night). Please confirm availability.`)}`,'_blank'); }); });
+    document.getElementById('whatsappSendBtn').addEventListener('click',()=>{ let name = document.getElementById('guestName').value.trim(), ci = checkin.value, co = checkout.value, roomOpt = roomSelect.options[roomSelect.selectedIndex].text, guests = document.getElementById('guests').value, special = document.getElementById('specialRequests').value, nights = calcNights(), price = parseInt(roomSelect.value), total = nights * price; if(!name || !ci || !co || nights<=0) { alert("Please fill dates & name."); return; } window.open(`https://wa.me/212612345678?text=${encodeURIComponent(`*New reservation*%0A%0AName: ${name}%0ADates: ${ci} → ${co} (${nights} nights)%0ARoom: ${roomOpt}%0AGuests: ${guests}%0ATotal: ${total.toLocaleString()} MAD%0ARequests: ${special||"none"}%0AThank you.`)}`,'_blank'); });
+    const fades = document.querySelectorAll('.fade-up'); const obs = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }); },{threshold:0.1}); fades.forEach(el=>obs.observe(el));
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Palais de Cèdre",
+  "description": "Luxury eco-hotel in Khénifra, Morocco, nestled in the Middle Atlas cedar forest. Traditional hammam, forest-view pool, quad adventures and authentic cuisine.",
+  "address": { "@type": "PostalAddress", "streetAddress": "Route de Khenifra", "addressLocality": "Khénifra", "addressRegion": "Béni Mellal-Khénifra", "addressCountry": "MA" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 32.9340, "longitude": -5.6640 },
+  "priceRange": "800-1800 MAD",
+  "telephone": "+212612345678",
+  "email": "reserve@palaisdecedre.ma",
+  "starRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Heated Pool" },
+    { "@type": "LocationFeatureSpecification", "name": "Spa & Hammam" },
+    { "@type": "LocationFeatureSpecification", "name": "Restaurant" },
+    { "@type": "LocationFeatureSpecification", "name": "Room Service" },
+    { "@type": "LocationFeatureSpecification", "name": "Free Parking" },
+    { "@type": "LocationFeatureSpecification", "name": "Quad Tours" }
+  ],
+  "image": "https://www.palaisdecedre.com/images/overview.jpg",
+  "url": "https://www.palaisdecedre.com/",
+  "sameAs": [ "https://www.instagram.com/palaisdecedre/", "https://www.facebook.com/palaisdecedre" ]
+}
+</script>
+</body>
+</html>
