@@ -138,7 +138,8 @@
                 </div>
             </div>
             <div class="room-card fade-up" data-room-name="Prestige Suite">
-                <div class="room-img"><img src="doubleroom.jpg" alt="Prestige Suite" loading="lazy" class="room-main-img"></div>
+                <!-- Using an image that is very likely present: one of the PHOTO files from the suite -->
+                <div class="room-img"><img src="PHOTO-2025-06-25-22-54-08_3.jpg" alt="Prestige Suite" loading="lazy" class="room-main-img"></div>
                 <div class="room-info">
                     <h3 data-i18n="room_suite_name">Prestige Suite</h3>
                     <div class="price">1,500 MAD <span style="font-size:0.9rem;" data-i18n="per_night">/ night</span></div>
@@ -234,22 +235,39 @@
 </div>
 
 <script>
-    // Gallery carousel images – exact filenames as provided (except removed one)
+    // === GALLERY IMAGES: using the most common files from your list (ensure these exist in your folder) ===
     const galleryImages = [
-        "exterieur.jpg", "exterieur2.jpg", "overview.jpg", "pool1.jpg", 
-        "PHOTO-2025-06-25-22-40-15_2.jpg", "PHOTO-2025-06-25-22-40-15_3.jpg",
-        "PHOTO-2025-06-25-22-54-07_2.jpg", "PHOTO-2025-06-25-22-54-07_3.jpg",
-        "PHOTO-2025-06-25-22-54-08.jpg", "PHOTO-2025-06-25-22-54-08_1.jpg",
-        "PHOTO-2025-06-25-22-54-08_2.jpg", "PHOTO-2025-06-25-22-54-08_3.jpg",
-        "PHOTO-2025-06-25-22-54-09.jpg", "PHOTO-2025-06-25-22-54-09_1.jpg",
-        "PHOTO-2025-06-25-22-54-09_2.jpg", "PHOTO-2025-06-25-22-54-09_3.jpg",
-        "PHOTO-2025-06-25-22-54-10.jpg", "PHOTO-2025-06-25-22-54-10_2.jpg",
-        "PHOTO-2025-07-15-19-18-53.jpg", "PHOTO-2025-07-15-19-18-53_1.jpg",
-        "PHOTO-2025-07-15-19-18-53_2.jpg", "PHOTO-2025-07-15-19-18-54.jpg",
-        "PHOTO-2025-07-15-19-18-54_3.jpg", "PHOTO-2025-07-15-19-18-55.jpg",
-        "PHOTO-2025-06-19-20-11-44.jpg", "PHOTO-2025-06-19-20-11-44_1.jpg",
-        "PHOTO-2025-06-19-20-11-44_2.jpg", "restaurant%20and%20terasse.jpg",
-        "terasse.jpg", "PHOTO-2023-09-26-18-55-38_1.jpg", "PHOTO-2023-09-26-18-55-38_2.jpg"
+        "exterieur.jpg",
+        "exterieur2.jpg",
+        "overview.jpg",
+        "pool1.jpg",
+        "PHOTO-2025-06-25-22-40-15_2.jpg",
+        "PHOTO-2025-06-25-22-40-15_3.jpg",
+        "PHOTO-2025-06-25-22-54-07_2.jpg",
+        "PHOTO-2025-06-25-22-54-07_3.jpg",
+        "PHOTO-2025-06-25-22-54-08.jpg",
+        "PHOTO-2025-06-25-22-54-08_1.jpg",
+        "PHOTO-2025-06-25-22-54-08_2.jpg",
+        "PHOTO-2025-06-25-22-54-08_3.jpg",
+        "PHOTO-2025-06-25-22-54-09.jpg",
+        "PHOTO-2025-06-25-22-54-09_1.jpg",
+        "PHOTO-2025-06-25-22-54-09_2.jpg",
+        "PHOTO-2025-06-25-22-54-09_3.jpg",
+        "PHOTO-2025-06-25-22-54-10.jpg",
+        "PHOTO-2025-06-25-22-54-10_2.jpg",
+        "PHOTO-2025-07-15-19-18-53.jpg",
+        "PHOTO-2025-07-15-19-18-53_1.jpg",
+        "PHOTO-2025-07-15-19-18-53_2.jpg",
+        "PHOTO-2025-07-15-19-18-54.jpg",
+        "PHOTO-2025-07-15-19-18-54_3.jpg",
+        "PHOTO-2025-07-15-19-18-55.jpg",
+        "PHOTO-2025-06-19-20-11-44.jpg",
+        "PHOTO-2025-06-19-20-11-44_1.jpg",
+        "PHOTO-2025-06-19-20-11-44_2.jpg",
+        "restaurant%20and%20terasse.jpg",
+        "terasse.jpg",
+        "PHOTO-2023-09-26-18-55-38_1.jpg",
+        "PHOTO-2023-09-26-18-55-38_2.jpg"
     ];
 
     let currentIndex = 0, autoSlideInterval;
@@ -287,10 +305,10 @@
     lightboxClose.addEventListener('click', closeLightbox); lightboxPrev.addEventListener('click', showLightboxPrev); lightboxNext.addEventListener('click', showLightboxNext); lightboxModal.addEventListener('click', (e) => { if (e.target === lightboxModal) closeLightbox(); });
     document.addEventListener('keydown', (e) => { if (lightboxModal.style.display !== 'flex') return; if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowLeft') showLightboxPrev(); if (e.key === 'ArrowRight') showLightboxNext(); });
 
-    // Room multi-image lightbox – using exact filenames from your list
+    // Room multi-image lightbox – using exact names from your list
     const roomImages = {
         "Standard Room": ["singleroom.jpg", "room1.jpg", "room2.jpg", "room3.jpg", "room4.jpg"],
-        "Prestige Suite": ["doubleroom.jpg", "PHOTO-2025-06-25-22-54-08_3.jpg", "PHOTO-2025-06-25-22-54-08_2.jpg", "PHOTO-2025-06-25-22-54-08_1.jpg"],
+        "Prestige Suite": ["PHOTO-2025-06-25-22-54-08_3.jpg", "PHOTO-2025-06-25-22-54-08_2.jpg", "PHOTO-2025-06-25-22-54-08_1.jpg", "doubleroom.jpg"],
         "Private Chalet": ["chalet%201.jpg", "chalet%202.jpg", "chalet3.jpg", "chalet4.jpg"]
     };
     document.querySelectorAll('.room-card').forEach(card => { const roomName = card.getAttribute('data-room-name'); const imgElement = card.querySelector('.room-main-img'); if (roomName && roomImages[roomName]?.length) { imgElement.style.cursor = 'pointer'; imgElement.addEventListener('click', (e) => { e.stopPropagation(); const images = roomImages[roomName]; let startIdx = images.indexOf(imgElement.src.split('/').pop()); if (startIdx === -1) startIdx = 0; openLightbox(images, startIdx); if (autoSlideInterval) clearInterval(autoSlideInterval); }); } else if (imgElement) { imgElement.addEventListener('click', () => openLightbox([imgElement.src], 0)); } });
@@ -313,14 +331,15 @@
     document.getElementById('whatsappSendBtn').addEventListener('click',()=>{ let name = document.getElementById('guestName').value.trim(), ci = checkin.value, co = checkout.value, roomOpt = roomSelect.options[roomSelect.selectedIndex].text, guests = document.getElementById('guests').value, special = document.getElementById('specialRequests').value, nights = calcNights(), price = parseInt(roomSelect.value), total = nights * price; if(!name || !ci || !co || nights<=0) { alert("Please fill dates & name."); return; } window.open(`https://wa.me/212612345678?text=${encodeURIComponent(`*New reservation*%0A%0AName: ${name}%0ADates: ${ci} → ${co} (${nights} nights)%0ARoom: ${roomOpt}%0AGuests: ${guests}%0ATotal: ${total.toLocaleString()} MAD%0ARequests: ${special||"none"}%0AThank you.`)}`,'_blank'); });
     const fades = document.querySelectorAll('.fade-up'); const obs = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }); },{threshold:0.1}); fades.forEach(el=>obs.observe(el));
 
-    // Optional: log missing images to console for debugging
+    // Debug: list all missing images in console
     window.addEventListener('load', function() {
         const allImages = document.querySelectorAll('img');
         allImages.forEach(img => {
             img.addEventListener('error', function() {
-                console.warn('Missing image:', this.src);
+                console.warn('❌ MISSING IMAGE:', this.src);
             });
         });
+        console.log('Website loaded. If any images are missing, check the console above.');
     });
 </script>
 <script type="application/ld+json">
